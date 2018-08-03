@@ -32,19 +32,9 @@ class App extends Component {
         <div class="parallax">
           <div id="group1" class="parallaxgroup">
             <div class="parallax- parallax---base">
-              <div class="title">
-                <img className="dan-logo" src="https://s3-ap-southeast-2.amazonaws.com/craftypint/crafty4/seller/Dan-logo-LARGE-171103-075155.png"/>
-                </div>
+              <img className="dan-logo" src="https://s3-ap-southeast-2.amazonaws.com/craftypint/crafty4/seller/Dan-logo-LARGE-171103-075155.png"/>
             </div>
-          </div>
-
-          <div id="group2" class="parallaxgroup">
-            <div class="parallax- parallax---base">
-              <div class="title">Base Layer group 2</div>
-            </div>
-
-            <div class="parallax- parallax---back">
-              {/*<div class="title">Background Layer 1</div>*/}
+            <div class="parallax- parallax-back">
             </div>
           </div>
 
@@ -59,7 +49,7 @@ class App extends Component {
             <div class="parallax- parallax---base">
               <div class="title">Base Layer group 4</div>
             </div>
-            <div class="parallax- parallax---back">
+            <div class="parallax- parallax-back">
               {/*<div class="title">Background Layer 2</div>*/}
             </div>
 
@@ -73,7 +63,7 @@ class App extends Component {
           </div>
   
           <div id="group6" class="parallaxgroup">
-            <div class="parallax- parallax---back">
+            <div class="parallax- parallax-back">
               {/*<div class="title"></div>*/}
             </div>
             <div class="parallax- parallax---base">
