@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: rgb(0,0,0, 0.8);  
 }
 
 /* Parallax base styles
@@ -78,32 +79,33 @@ body {
     color: white;
   }
 
-  #group1, #group5, #group7 {
+  #front-page, #group5, #location {
     z-index: 3; /* slide under groups 1 and 3 */
   }
-  #group1 .parallax-back {
+  #front-page .parallax-back {
     background-image: url('./images/thedan.jpg');
     background-size: cover;
     color: white;
   }
 
-  #group3 {
+  #about-us {
     z-index: 4; /* slide over group 2 and 4 */
   }
-  #group3 .parallax---base {
-    background: rgb(153,216,101, 0.7);
+  #about-us .parallax---base {
+    background-color: rgb(0,0,0, 0.9);
+    height: 100%;
   }
 
-  #group4, #group6 {
+  #menus, #group6 {
     z-index: 2; /* slide under group 3 and 5 */
   }
 
-  #group4 .parallax-back {
+  #menus .parallax-back {
     background-image: url('./images/guinness.jpg');
   }
 
   #group5 .parallax---base {
-    background: rgb(214,229,100);
+    background-color: rgb(0,0,0, 0.8);  
   }
 
   #group6 .parallax-back {
@@ -111,21 +113,161 @@ body {
     color: white;
   }
 
-  #group7 .parallax---base {
-    background: white;
+  #location .parallax---base {
+    /*background: white;*/
+    background-color: rgb(0,0,0, 0.9);  
   }
 
-/* Contact Us */
+/* Front page */
+/* Responsive Nav Bar*/
+.toggle-nav {
+  display: none;
+}
+
+.nav-link {
+  color: white;
+}
+
+.flex-nav ul {
+  background-color: rgb(0,0,0, 0.8);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 18px;
+  border: 1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.flex-nav li {
+  text-align: center;
+  padding: 10px 0;
+  flex: 3;
+  text-decoration: none;
+  color: white;
+}
+
+.flex-nav .social {
+  flex: 1;
+}
+
+.dan-logo {
+  color: black;
+  text-shadow: 2px 2px 3px #ffffff;
+  font-family: 'Glass Antiqua', cursive;
+  font-size: 80px;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 40px;
+}
+
+/* Menu Page */
+
+button {
+  width: 40vw;
+  font-size: 40px;
+  margin: 20px;
+  padding: 20px;
+  border: black solid 2px;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, rgb(250, 250, 250, 0.1), rgb(250, 250, 250, 1));
+}
+
+/* Location */
   .location {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .hours ul {
+    list-style: none;
+    font-size: 16px;
+  }
+
+  .contact {
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .contact-details {
+    order: 0;
+  }
+
+  .socials {
+    order: 1;
+  }
+
+  .hour {
+    order: 2;
+  }
+
+  .map {
+    order: 3;
   }
 
   iframe {
-    width: 96vw;
-    height: 50vw;
+    width: 90%;
+    height: 90%;
     border: solid black 2px;
-    margin: 20px;
+    /*padding: 20px;*/
   }
+
+
+@media all and (max-width: 1000px) {
+  .flex-nav ul {
+    flex-wrap: wrap;
+    height: 50vh;
+  }
+
+  .flex-nav li {
+    flex: 1 1 50%;
+  }
+
+  .flex-nav .social {
+    flex: 1 1 33%;
+  }
+}
+
+/* Contact Us */
+.contact-us-mobile {
+  display: none;
+  /*color: black;*/
+}
+
+.coming-soon {
+  height: 80%;
+  width: 80vw;
+  border: 2px solid white;
+  background: linear-gradient(to bottom, rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 1));
+}
+
+@media all and (max-width: 500px) {
+
+  .dan-logo {
+    font-size: 40px;
+    margin-top: 25px;
+  }
+
+  .flex-nav ul {
+    height: 80vh;
+  }
+
+  .flex-nav li {
+    flex-basis: 100%;
+  }
+}
+
+
